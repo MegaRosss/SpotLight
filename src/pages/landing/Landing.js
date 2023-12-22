@@ -1,31 +1,34 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
-import Marketing from "../../assets/images/marketing.png";
-import Research from "../../assets/images/research.png";
-import Development from "../../assets/images/dev.png";
-import Ui from "../../assets/images/uiux.png";
+// import Marketing from "../../assets/images/marketing.png";
+// import Research from "../../assets/images/research.png";
+// import Development from "../../assets/images/dev.png";
+// import Ui from "../../assets/images/uiux.png";
 import Card from "../../components/Card";
-import Testimonial from "../../components/TestimonialCard";
-import Hero from "../../assets/images/pattern1.jpg";
-import { Navigation, Autoplay, Pagination } from "swiper";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+// import Testimonial from "../../components/TestimonialCard";
+// import Hero from "../../assets/images/pattern1.jpg";
+// import { Navigation, Autoplay, Pagination } from "swiper";
+import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import {
   IoArrowBack,
-  IoArrowDownCircleOutline,
+  // IoArrowDownCircleOutline,
   IoArrowForward,
   IoCreateOutline,
   IoNotificationsOutline,
-  IoPeople,
+  // IoPeople,
   IoPeopleOutline,
   IoTicketOutline,
 } from "react-icons/io5";
-import { MdManageHistory, MdOutlineFileDownload, MdOutlinePrivacyTip, MdRsvp } from "react-icons/md";
-import { RiMouseLine, RiSteamLine } from "react-icons/ri";
+// import { MdManageHistory, MdOutlineFileDownload, MdOutlinePrivacyTip, MdRsvp } from "react-icons/md";
+import { MdOutlineFileDownload, MdOutlinePrivacyTip } from "react-icons/md";
+// import { RiMouseLine, RiSteamLine } from "react-icons/ri";
 import Hero2 from "../../assets/images/3187910.jpg";
 import Security from "../../assets/images/security.jpg";
 
@@ -63,13 +66,13 @@ const data = [
   {
     title: "Download Attendee List",
     description:
-      "Staying always connected is unsure in the age of internet. So SpotLight lets the event owners download a list of attendees for each event with our attendee list download feature. Export attendee lists in XLSX format for easy access and management.",
+      "Staying always connected is unsure in the age of internet. So Harpenin lets the event owners download a list of attendees for each event with our attendee list download feature. Export attendee lists in XLSX format for easy access and management.",
     icon: <MdOutlineFileDownload />,
   }
 ];
 
 function Landing() {
-  const swiper = useSwiper();
+  // const swiper = useSwiper();
   const swiperRef = useRef(null);
 
   const token = JSON.parse(localStorage.getItem("token"));
@@ -83,7 +86,7 @@ function Landing() {
             style={{ flexBasis: "50%" }}
           >
             <h1 className=" text-2xl md:text-4xl lg:text-6xl text-slate-100 font-bold leading-relaxed lg:leading-normal drop-shadow-2xl">
-              Spotlight Your Creativity
+            Find out whats Harpenin 
               <br />
               Curate Unforgettable Events
             </h1>
@@ -110,7 +113,7 @@ function Landing() {
       </div>
       <section className="flex flex-col-reverse  lg:flex-row w-full py-8 md:py-16 justify-between gap-8 md:gap-0 container">
         <div className="md:pt-16 " style={{ flexBasis: "50%" }}>
-          <img className="w-full" src={Hero2} />
+          <img className="w-full" src={Hero2} alt="hero img"/>
         </div>
         <div
           className="flex flex-col gap-4 items-start justify-evenly text-left py-8 lg:pl-16"
@@ -212,7 +215,7 @@ function Landing() {
       </div>
       <section className="flex flex-col-reverse lg:flex-row-reverse w-full py-8 md:py-16 justify-between gap-8 md:gap-0 container">
         <div className="" style={{ flexBasis: "50%" }}>
-          <img className="w-full" src={Security} />
+          <img className="w-full" src={Security} alt="security"/>
         </div>
         <div
           className="flex flex-col gap-4 items-start justify-evenly text-left py-8 lg:pr-16"

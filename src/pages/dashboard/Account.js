@@ -14,7 +14,7 @@ function Account() {
 
   const {userInfo, setUserInfo} = useUser()
 
-  // const user = JSON.parse(localStorage.getItem("spotlight-user"));
+  // const user = JSON.parse(localStorage.getItem("Harpenin-user"));
 
   const {
     name: userName,
@@ -78,7 +78,7 @@ function Account() {
   ];
 
   const revalidateFields = () => {
-    const user = JSON.parse(localStorage.getItem("spotlight-user"));
+    const user = JSON.parse(localStorage.getItem("Harpenin-user"));
     const {
       name: userName,
       email: userEmail,
@@ -118,7 +118,7 @@ function Account() {
         }
         toast.success("Name updated successfully!");
         
-        localStorage.setItem("spotlight-user", JSON.stringify(res));
+        localStorage.setItem("Harpenin-user", JSON.stringify(res));
         revalidateFields();
       }
     } catch (err) {
